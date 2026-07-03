@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">TabPilot logo</title>
+  <desc id="desc">A browser tab icon with a navigation arrow for the TabPilot student focus workspace.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="900" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071a3a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="298" y1="632" x2="820" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path fill="#f8fafc" d="M242 278c0-44 36-80 80-80h220c34 0 65 17 84 45l45 66c15 22 40 35 66 35h140c44 0 80 36 80 80v72H377c-45 0-81 36-81 81v226h-54V278z"/>
+    <path fill="#f8fafc" d="M242 278h108v508c0 44 36 80 80 80h144l-70 70H322c-44 0-80-36-80-80V278z"/>
+    <circle cx="328" cy="290" r="19" fill="#071a3a"/>
+    <circle cx="398" cy="290" r="19" fill="#071a3a"/>
+    <circle cx="468" cy="290" r="19" fill="#071a3a"/>
+    <path fill="url(#arrow)" d="M294 640 832 424 640 856 548 666z"/>
+    <path fill="#1d4ed8" d="M548 666 674 574 640 856z" opacity="0.9"/>
+  </g>
+</svg>
