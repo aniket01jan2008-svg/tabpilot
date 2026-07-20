@@ -2,7 +2,7 @@
 
 ![TabPilot project media](public/media/tabpilot-project-media.png)
 
-TabPilot is a student-focused productivity workspace that turns scattered
+TabPilot is an interactive student productivity workspace that turns scattered
 browser tabs, study links, notes, deadlines, and tasks into one clear focus
 board.
 
@@ -56,9 +56,14 @@ without losing context.
 
 ## Current Status
 
-This repository contains the first working frontend prototype:
+This repository contains an interactive frontend MVP:
 
 - responsive landing page
+- create and switch study/project sessions
+- add categorized resource links
+- add up to three focus tasks per session
+- mark focus tasks complete
+- save MVP data in browser local storage
 - product explanation sections
 - dashboard-style preview
 - project branding/media

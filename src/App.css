@@ -36,6 +36,12 @@
   font-size: 0.85rem;
 }
 
+.nav-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
 .nav-link {
   color: var(--muted);
   font-weight: 700;
@@ -132,6 +138,13 @@
   font-size: 2rem;
 }
 
+.dashboard header p {
+  max-width: 360px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .score {
   display: grid;
   width: 66px;
@@ -143,21 +156,72 @@
   font-weight: 850;
 }
 
-.capture-form {
+.session-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.session-switcher button,
+.reset-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.session-switcher button {
+  padding: 9px 12px;
+}
+
+.session-switcher button.active {
+  color: white;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.session-form,
+.capture-form,
+.task-form {
   display: grid;
-  grid-template-columns: 1fr auto;
   gap: 10px;
-  margin-top: 24px;
+}
+
+.session-form {
+  grid-template-columns: 0.85fr 1.15fr auto;
+  margin-top: 18px;
+}
+
+.capture-form {
+  grid-template-columns: 0.85fr 1.15fr 112px auto;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.task-form {
+  grid-template-columns: 1fr auto;
+  margin-top: 12px;
 }
 
 .capture-form input,
-.capture-form button {
+.capture-form button,
+.capture-form select,
+.session-form input,
+.session-form button,
+.task-form input,
+.task-form button {
   min-height: 48px;
   border-radius: 14px;
   font: inherit;
 }
 
-.capture-form input {
+.capture-form input,
+.capture-form select,
+.session-form input,
+.task-form input {
   min-width: 0;
   padding: 0 14px;
   color: var(--ink);
@@ -165,11 +229,14 @@
   border: 1px solid var(--line);
 }
 
-.capture-form button {
+.capture-form button,
+.session-form button,
+.task-form button {
   padding: 0 17px;
   color: white;
   background: var(--blue);
   border: 0;
+  cursor: pointer;
   font-weight: 800;
 }
 
@@ -189,6 +256,20 @@
   border-radius: 14px;
   color: var(--ink);
   font-weight: 700;
+}
+
+.focus-list label.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 13px 14px;
+  color: var(--muted);
+  background: white;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
 }
 
 .lanes {
@@ -213,13 +294,26 @@
   font-size: 0.88rem;
 }
 
+.lanes a,
 .lanes p {
+  display: block;
   margin: 10px 0 0;
   padding: 9px 10px;
   color: var(--muted);
   background: #f1f5f9;
   border-radius: 11px;
   font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.lanes a {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.reset-button {
+  margin-top: 16px;
+  padding: 10px 14px;
 }
 
 .problem,
@@ -285,6 +379,11 @@
   }
 
   .capture-form {
+    grid-template-columns: 1fr;
+  }
+
+  .session-form,
+  .task-form {
     grid-template-columns: 1fr;
   }
 }
